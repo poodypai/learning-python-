@@ -3,6 +3,7 @@ def main():
     dna_seq = input("Enter the DNA Sequence ")
     rna_seq = dna_seq.upper().replace('T','U')
     print("The RNA Sequence is: ", rna_seq)
+    web = 'https://alphafold.ebi.ac.uk/search/sequence/'
     protein_seq=[]
     codontable = {
     'UUU': 'F', 'UUC': 'F', 'UUA': 'L', 'UUG': 'L', 'UCU': 'S', 'UCC': 'S', 'UCA': 'S', 'UCG': 'S',
@@ -24,4 +25,5 @@ def main():
     
     protein_seq = ''.join(protein_seq)
     print("Protein Sequence is: ", protein_seq)
+    print("To view the 3D Structure go to:",web + protein_seq )
 main()
